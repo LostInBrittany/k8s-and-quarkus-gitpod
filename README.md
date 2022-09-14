@@ -2,7 +2,8 @@
 
 A working Gitpod setup to work with Kubernetes and Quarkus. The workspace includes:
 
-- For Kubernetes: Kubectl, Helm, Velero & Kustomize.
+- For Kubernetes: Kubectl, K9s, Helm, Velero & Kustomize.
+- For Quarkus: Java 11, Quarkus
 
 To open the workspace, simply click on the *Open in Gitpod* button, or use [this link](https://gitpod.io/#https://github.com/LostInBrittany/k8s-and-quarkus-gitpod.git).
 
