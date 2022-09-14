@@ -1,4 +1,4 @@
-ARG GITPOD_IMAGE=gitpod/workspace-full:latest
+ARG GITPOD_IMAGE=gitpod/workspace-java-11:latest
 FROM ${GITPOD_IMAGE}
 
 ## Update the packet cache
@@ -6,12 +6,9 @@ RUN sudo apt update
 
 ## Install Java 11 and Quarkus
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
-    sdk install java 11.0.9.j9-adpt && \
-    sdk use java 11.0.9.j9-adpt && \
-    yes | sdk install quarkus && \
+    sdk install quarkus && \
     rm -rf $HOME/.sdkman/archives/* && \
     rm -rf $HOME/.sdkman/tmp/* "
-
 
 ## Install Kubectl
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && \
